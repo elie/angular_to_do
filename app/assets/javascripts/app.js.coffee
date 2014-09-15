@@ -44,16 +44,16 @@ ToDoApp.controller "TodosCtrl", ["$scope", "$http", ($scope, $http) ->
     todo.completed = todo.completed == false ? true: false;
     todo.checked = todo.completed == false ? false: true;
 
-    $http.put("/todos/#{this.todo.id}.json", todo).success (data) ->
+    $http.put("/todos/#{todo.id}.json", todo).success (data) ->
   # OPEN EDITING FORM
-  $scope.openForm = (todo) ->
+  $scope.openForm = () ->
     this.editing = true
     this.viewing = true
   # EDIT
   $scope.editToDo = (todo) ->
     this.editing = false
     this.viewing = false
-    $http.put("/todos/#{this.todo.id}.json", todo).success (data) ->
+    $http.put("/todos/#{todo.id}.json", todo).success (data) ->
 ]
 
 # Define Config for CSRF token

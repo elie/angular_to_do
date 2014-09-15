@@ -26,7 +26,7 @@
 		<span style = "font-size:2em;"ng-class = "{'task' : todo.completed}"ng-hide = "viewing" ng-dblclick ="openForm(todo)">
 		<input type="checkbox" ng-checked = "todo.completed" ng-model ="checked" ng-change = "markCompleted(todo)">
 		{{todo.thing}}
-		<button class = "btn btn-danger btn-xs	" ng-click ="deleteToDo(todo)">X</button>
+		<button class = "btn btn-danger btn-xs" ng-click ="deleteToDo(todo)">X</button>
 		</span>
 		<span ng-show="editing">
 			<input autofocus type="text" ng-model = "todo.thing" value ="{{todo.thing}}">
