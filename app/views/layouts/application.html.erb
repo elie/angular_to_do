@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Angular To Do</title>
+  <%= stylesheet_link_tag    "application", media: "all"%>
+  <%= javascript_include_tag "application"%>
+  <%= csrf_meta_tags %>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+</head>
+<body ng-app="ToDoApp">
+
+<!-- use this when rendering pages with the angular router -->
+  <div ng-view>
+
+  </div>
+
+</body>
+</html>
